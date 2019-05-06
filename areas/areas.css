@@ -1,0 +1,67 @@
+/* GLOBAL STYLES */
+
+* {
+box-sizing: border-box;
+}
+
+body {
+background-color: #AAA;
+margin: 0px 50px 50px;
+}
+
+/* Each item in the grid contains numbers */
+.item {
+/* Center the contents of the grid items. Making each grid item a Flex Container */
+display: flex;
+
+/* Horizontal and Vertical centering */
+justify-content: center;
+align-items: center;
+border: 5px solid #87b5ff;
+border-radius: 3px;
+font-size: 2em;
+font-family: sans-serif;
+font-weight: bold;
+background-color: #1c57b5
+}
+
+/*CSS Grid styles */
+
+.container {
+display: grid;
+grid-template-columns: 3fr 5fr 3fr;
+grid-template-rows: auto auto auto;
+grid-template-areas: "top top top" "left center right" "bottom bottom .";
+}
+
+
+.header { 
+grid-area: top;
+}
+
+.content {
+grid-area: center;
+}
+
+.articles {
+grid-area: right;
+}
+
+.footer {
+grid-area: bottom;
+}
+
+.ads {
+grid-area: left;
+}
+
+/* Media Queries */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)
+{
+.container {
+grid-template-areas:
+"left top top"
+"left center center"
+"bottom bottom right";
+}
+}

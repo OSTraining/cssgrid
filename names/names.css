@@ -1,0 +1,62 @@
+/* GLOBAL STYLES */
+
+* {
+box-sizing: border-box;
+}
+
+body {
+background-color: #AAA;
+margin: 0px 50px 50px;
+}
+
+/* Each item in the grid contains numbers */
+.item {
+/* Center the contents of the grid items. Making each grid item a Flex Container */
+display: flex;
+
+/* Horizontal and Vertical centering */
+justify-content: center;
+align-items: center;
+border: 5px solid #87b5ff;
+border-radius: 3px;
+font-size: 2em;
+font-family: sans-serif;
+font-weight: bold;
+background-color: #1c57b5
+}
+
+/*CSS Grid styles */
+
+/*CSS Grid styles */
+.container {
+display: grid;
+grid-template-columns: [start sidebar-start] 3fr [sidebar-end content-start] 5fr [content-end ads-start] 3fr [end ads-end];
+grid-template-rows: [start header-start] 3fr [header-end content-start] 6fr [content-end footer-start] 2fr [end footer-end];
+grid-column-gap: 1rem;
+height: 100vh;
+}
+
+.header {
+grid-column: start / end;
+grid-row: start / header-end;
+}
+
+.articles {
+grid-column: start / sidebar-end;
+grid-row: header-end / footer-start;
+}
+
+.content {
+grid-column: content-start / content-end;
+grid-row: content-start / content-end;
+}
+
+.footer {
+grid-column: start / end;
+grid-row: footer-start / footer-end;
+}
+
+.ads {
+grid-column: ads-start / end;
+grid-row: header-end / footer-start;
+}
