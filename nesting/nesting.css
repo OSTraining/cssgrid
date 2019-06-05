@@ -1,0 +1,39 @@
+/* GLOBAL STYLES */
+
+   * {
+       box-sizing: border-box;
+       }
+
+   body {
+   background-color: #AAA;
+   margin: 50px;
+   }
+
+   /* Each item in the grid contains numbers */
+   .item {
+       border: 5px solid #87b5ff;
+       border-radius: 3px;
+       font-family: sans-serif;
+       font-size: 1.5rem;
+       font-weight: bold;
+       background-color: #1c57b5;
+   }
+
+   .subitem {
+       background-color: #fdfa4e;
+       border: 3px solid #d32121;
+   }
+
+/*  CSS GRID STYLES */
+
+   .container {
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       grid-gap: 1rem;
+   }
+
+.item3 {
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       grid-gap: 0.5em;
+   }

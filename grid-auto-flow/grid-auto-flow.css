@@ -1,0 +1,52 @@
+/* GLOBAL STYLES */
+
+* {
+       box-sizing: border-box;
+   }
+      
+   body {
+   background-color: #AAA;
+   margin: 50px;
+   }
+
+   /* Each item in the grid contains numbers */
+   .item {
+   /* Center the contents of the grid items, making each grid item a Flex Container */
+   display: flex;
+
+   /* Horizontal and Vertical centering */
+   justify-content: center;
+   align-items: center;
+   border: 5px solid #87b5ff;
+   border-radius: 3px;
+   font-size: 2em;
+   font-family: sans-serif;
+   font-weight: bold;
+   background-color: #1c57b5;
+}
+
+
+.container {
+       display: grid;
+       grid-template-columns: repeat(5, 5fr);
+       grid-template-rows: repeat(5, 5fr);
+       grid-gap: 2em;
+       grid-auto-flow: column dense;
+   }
+
+
+
+.item:nth-child(3n) {
+       grid-column: span 4;
+       background-color: #12cc12;
+   }
+
+   .item:nth-child(5n) {
+       grid-column: span 3;
+       background-color: #f5ecec;
+   }
+
+   .item:nth-child(7n) {
+       grid-column: span 2;
+       background-color: #f35810;
+   }
